@@ -26,6 +26,18 @@ const Button = styled.button`
   }
 `;
 
+const Twitter = styled.a`
+  background: #1DA1F2;
+  background-size: 150px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border: 2px solid black;
+  transition: background-size .8s ease;
+`;
+
 function App() {
 
   //States
@@ -45,16 +57,21 @@ function App() {
   
 
   return (
-    <Container>
+    <Container id="quote-box">
       <Phrase
         phrase={phrase}
       />
 
       <Button
         onClick={consultAPI}
+        id="new-quote"
       >
         Get Phrase
-    </Button>
+      </Button>
+      
+      <Twitter id="tweet-quote" href="twitter.com/intent/tweet" target="_blank"><i class="fab fa-twitter"></i></Twitter>
+
+     
     </Container>
   );
 }

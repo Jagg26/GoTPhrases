@@ -41,8 +41,8 @@ const PhraseContainer = styled.div`
 const Phrase = ({ phrase }) => {
     return (
         <PhraseContainer>
-            <h1>{phrase.quote}</h1>
-            <p>{phrase.character}</p>
+            <h1 id="text">{phrase.quote}</h1>
+            <p id="author">{phrase.character}</p>
         </PhraseContainer>
     );
 }
